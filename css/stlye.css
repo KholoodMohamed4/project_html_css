@@ -1,0 +1,948 @@
+* {
+  font-family: "Lato", sans-serif;
+  font-family: "Nunito", sans-serif;
+  font-family: "Open Sans", sans-serif;
+  font-family: "Varela Round", sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+ 
+}
+
+/* ===============================  Navbar ==================================== */
+.navContainer {
+  width: 100%;
+  height: 60px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow: auto;
+  z-index: 3;
+  background-color: white;
+}
+.navContainer a {
+  text-decoration: none;
+  color: black;
+}
+
+.LogoImg {
+  width: 140px;
+  height: 55px;
+  float: left;
+  margin-left: 80px;
+}
+.NavOptionsLeft {
+  list-style: none;
+  float: left;
+  margin-left: 70px;
+  margin-top: 12px;
+  position: relative;
+}
+.NavLine{
+  position: relative;
+}
+
+.NavLine::after{
+  position: absolute;
+  top: 22px;
+  content: " ";
+  width: 0;
+  height: 3px;
+  bottom: 0;
+  left: 0;
+  background-color: #fe8246;
+  transition: 0.6s;
+
+}
+.NavLine:hover::after{
+ width: 100%;
+}
+
+.NavOptionsLeft li {
+  display: inline-block;
+  font-size: 18px;
+  margin-right: 30px;
+  margin-top: 10px;
+}
+.NavOptionsRight {
+  list-style: none;
+  float: right;
+  margin-right: 80px;
+  margin-top: 12px;
+}
+.NavOptionsRight li {
+  display: inline-block;
+  font-size: 18px;
+  margin-right: 45px;
+  margin-top: 10px;
+}
+.HiddenBlog {
+  position: fixed;
+  top: 60px;
+  right: 204px;
+  width: 110px;
+  height: 50px;
+  padding: 13px;
+  background-color: #ed7336;
+  color: white;
+  z-index: 2;
+  text-align: center;
+  visibility: hidden;
+  
+}
+.Blog:hover .HiddenBlog {
+  visibility: visible;
+}
+/* ==================================== Section 2 Home Page ============================ */
+
+.HomeContainer {
+  width: 100%;
+  height: 100vh;
+  background-image: url(../Images/HomeBackgound.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  top: 70px;
+}
+.HomeOverLay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.555);
+}
+.HomeContentOverLay {
+  position: absolute;
+  text-align: center;
+  width: 80%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50% , -50%);
+  color: white;
+  font-size: large;
+}
+.HomeContainer button {
+ 
+  padding: 16px 15px;
+  border-radius: 10px;
+  border: 0;
+  font-size: large;
+}
+.HomeContainer button:hover {
+  opacity: 0.8;
+}
+.btnHomeRight {
+  margin-left: 10px;
+  background-color: #fe8246;
+  color: white;
+}
+
+/* ==================================== Section 2 Services ============================ */
+.ServicesContainer {
+  width: 100%;
+  margin-top: 70px;
+  height: 600px;
+  position: relative;
+  
+}
+.ServicesDivs {
+  position: absolute;
+  width: 90%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50% , -50%);
+  text-align: center;
+  font-size: large;
+  overflow: auto;
+}
+.ServicesDivs h3{
+  font-size: 22px;
+ 
+}
+.ServicesLine,
+.ProductsLine,
+.CatLine,
+.OffersLine,
+.revLine,
+.teamLine,
+.BlogLine
+{
+  width: 60px;
+  height: 3px;
+  background-color: #fe8246;
+  margin: auto;
+  margin-top: 7px;
+}
+.ServicesDivOne,
+.ServicesDivTwo,
+.ServicesDivThree {
+  border: 2px solid lightgray;
+  border-top-left-radius: 27px;
+  border-bottom-right-radius: 27px;
+  width: 30%;
+  float: left;
+  margin-top: 30px;
+  padding: 20px;
+  margin-left: 30px;
+  height: 370px;
+  position: relative;
+  transition: 0.5s;
+}
+.ServicesIcon {
+  font-size: 40px;
+  color: #ed7336;
+  display: block;
+  margin-bottom: 40px;
+  margin-top: 20px;
+}
+.ServiceAnchor {
+  text-decoration: none;
+  color: #ed7336;
+}
+.ServicesParagraph {
+  color: rgb(90, 87, 87);
+  
+}
+.ServicesDivOne::after,
+.ServicesDivTwo::after,
+.ServicesDivThree::after{
+  position: absolute;
+  content: " ";
+  width: 0;
+  height: 0;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  transition: 0.5s;
+  background-color: rgba(81, 79, 79, 0.256);
+  border-top-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+}
+.ServicesDivOne:hover:after,
+.ServicesDivTwo:hover::after,
+.ServicesDivThree:hover::after{
+  width: 100%;
+  height: 100%;
+
+}
+.ServicesDivOne:hover h3,
+.ServicesDivTwo:hover h3,
+.ServicesDivThree:hover h3{ 
+  color: #f05c13;
+  
+}
+.ServicesDivOne:hover p,
+.ServicesDivTwo:hover p,
+.ServicesDivThree:hover p{ 
+  color: black;
+}
+/* ==================================== Section 2 Products ============================ */
+
+.ProductsContainer {
+  width: 100%;
+  text-align: center;
+  height: 940px;
+  background-color: rgba(173, 155, 65, 0.118);
+  padding: 50px 0;
+  position: relative;
+  
+}
+.OurProducts{
+  position: absolute;
+  width: 85%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50% , -50%);
+}
+
+.pro1,
+.pro2,
+.pro3,
+.pro4,
+.pro5,
+.pro6 {
+  float: left;
+  margin-right: 30px;
+  margin-top: 20px;
+  width: 30%;
+  height: 350px;
+  position: relative;
+}
+
+.ProOverLay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.809);
+  text-align: center;
+  visibility: hidden;
+  
+}
+.OverLayContentProduct {
+  margin: 120px auto;
+  font-size: 17px;
+  color: white;
+}
+
+.OverLayContentProduct h5 {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 23px;
+  margin-bottom: 10px;
+  top: 15px;
+  position: relative;
+  visibility: hidden;
+  
+}
+.OverLayContentProduct p,
+.OverLayContentProduct a{ 
+  position: relative;
+  top: 15px;
+  visibility: hidden;
+  
+}
+
+.ProductIcons {
+  color: #ed7336;
+  font-size: 18px;
+  margin-top: 10px;
+  margin-right: 6px;
+}
+
+.pro1:hover .ProOverLay,
+.pro2:hover .ProOverLay,
+.pro3:hover .ProOverLay,
+.pro4:hover .ProOverLay,
+.pro5:hover .ProOverLay,
+.pro6:hover .ProOverLay {
+  visibility: visible;
+}
+.pro1:hover h5,
+.pro2:hover h5,
+.pro3:hover h5,
+.pro4:hover h5,
+.pro5:hover h5,
+.pro6:hover h5 {
+  top: 0;
+  transition:  1s;
+  visibility: visible;
+}
+.pro1:hover p,
+.pro2:hover p,
+.pro3:hover p,
+.pro4:hover p,
+.pro5:hover p,
+.pro6:hover p {
+  top: 2px;
+  transition:  1s;
+  visibility: visible;
+}
+.pro1:hover a,
+.pro2:hover a,
+.pro3:hover a,
+.pro4:hover a,
+.pro5:hover a,
+.pro6:hover a {
+  top: 5px;
+  transition:  1s;
+  visibility: visible;
+}
+
+
+.LoadMore{
+  position: absolute;
+  left: 570px;
+  bottom: 40px;
+  text-align: center;
+  width: 120px;
+  height: 40px;
+  color: #ed7336;
+  border: 1px solid #f05c13;
+  padding: 10px;
+  border-radius: 3px;
+}
+.LoadMore:hover{
+  color: white;
+  background-color: #ed7336;
+}
+
+/* ==================================== Section 5 Categories ============================ */
+
+.categoriesContainer{
+  position: relative;
+  width: 100%;
+  padding: 50px 0;
+  
+}
+.AllCat{
+  overflow: auto;
+  width: 90%;
+  margin: auto;
+  margin-top: 50px;
+  padding-left: 30px;
+}
+.Cat1,
+.Cat2,
+.Cat3,
+.Cat4,
+.Cat5,
+.Cat6{
+  margin: 20px;
+  float: left;
+  width: 28%;
+  height: 200px;
+  border: 1px solid rgba(161, 160, 160, 0.734);
+  padding: 20px 5px 20px 20px;
+  border-radius: 2px;
+  position: relative;
+  padding: 40px;
+  
+}
+.Icon{
+  width: 10%;
+  height: 100%;
+  float: left;
+  margin-right: 50px;
+}
+.CatIcon{
+  font-size: 40px;
+  color: #ed7336;
+  
+}
+.CatCont p{
+  color: rgb(74, 71, 71);
+}
+.CatCont h2{
+  font-family:Arial, Helvetica, sans-serif;
+}
+.Cat1::before,
+.Cat2::before,
+.Cat3::before,
+.Cat4::before,
+.Cat5::before,
+.Cat6::before{
+  position: absolute;
+  content: " ";
+  width: 0;
+  height: 0;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  transition: 0.5s;
+  background-color: rgba(81, 79, 79, 0.256);
+  border-radius: 2px;
+  
+
+}
+.Cat1:hover:before,
+.Cat2:hover::before,
+.Cat3:hover::before,
+.Cat4:hover::before,
+.Cat5:hover::before,
+.Cat6:hover::before{
+  width: 100%;
+  height: 100%;
+}
+
+
+/* ==================================== Section 6 Features ============================ */
+
+
+.FeaturesContainer{
+  width: 100%;
+  height:700px;
+  background-color: rgba(173, 155, 65, 0.118);
+ 
+}
+.Features{
+  overflow: auto;
+  width:100%;
+  margin: auto;
+  margin-top: 50px;
+  padding-left: 30px;
+  position: relative;
+  
+}
+.FeaturesImg{
+  
+  margin-left: -30px;
+  float: left;
+ 
+}
+.FeaturesContent{
+  padding-top: 90px;
+  float: left;
+  width: 50%;
+  margin-left: 50px;
+}
+.FeaturesContent p{
+  margin: 50px 0;
+  font-size: 19px;
+}
+.FeaturesLine{
+  width: 60px;
+  height: 3px;
+  background-color: #fe8246;
+  margin-left: 140px;
+  margin-top: 7px;
+}
+.FeaturesIcon{
+  color: #fe8246;
+  font-size: 18px;
+}
+.Cont{
+  color: rgb(78, 73, 73);
+}
+.FeaturesMore{
+  list-style: none;
+  text-align: center;
+}
+.More{
+  height: 10px;
+  width: 10px;
+  background-color: darkgray;
+  display: inline-block;
+  margin-right: 10px;
+  border-radius: 50%;
+}
+.More:hover{
+  background-color: #fe8246;
+}
+
+/* ==================================== Section 7 ============================ */
+.backgroundContainer{
+  width: 100%;
+  height: 300px;
+  background-image: url(../Images/Furniture.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+}
+.OverLaySection,
+.revOverLay{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.707);
+}
+.SectionOverLayContent,
+.revOverLayContent
+{
+  width: 80%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  overflow: auto;
+}
+.ContentOne,
+.ContentTwo,
+.ContentThree,
+.ContentFour{
+  float: left;
+  width: 23%;
+  height: 200px;
+  margin-right: 20px;
+  color: white;
+  padding: 20px;
+}
+.SecIcon{
+  color: #ed7336;
+  font-size: 45px;
+  margin-bottom: 10px;
+}
+.SectionOverLayContent p{
+  font-size: 15px;
+}
+
+
+/* ==================================== Section 8 Sepecial Offers ============================ */
+
+
+.OffersConatiner{
+  width: 100%;
+  text-align: center;
+  margin-top: 50px;
+  
+  
+}
+.OffersConatiner{
+  padding-left: 55px;
+}
+.OffersItems{
+  width: 80%;
+  margin: 80px auto;
+  text-align: center;
+  overflow: auto;
+}
+.OfferItemOne,
+.OfferItemTwo,
+.OfferItemThree{
+  width: 28%;
+  padding: 20px;
+  float: left;
+  border: 1px solid lightgray;
+  padding: 20px 0;
+  border-radius: 12px;
+  position: relative;
+  height: 390px;
+  line-height: 22px;
+  margin-right: 40px;
+}
+.ItemImg{
+  border-radius: 50%;
+  margin: 15px 0;
+}
+.Btn{
+  width: 220px;
+  height: 50px;
+  border-radius: 10px;
+  border: 1px solid #f05c13;
+  background-color: white;
+  margin-bottom: 10px;
+  color: #da4e08;
+  font-size: 15px;
+}
+.OfferItemOne:hover .Btn,
+.OfferItemTwo:hover .Btn,
+.OfferItemThree:hover .Btn{
+  color: white;
+  background-color: #ea6421;
+  border: 0;
+}
+.OfferItemOne:hover h2,
+.OfferItemTwo:hover h2,
+.OfferItemThree:hover h2{
+  color: #ed7336;
+  
+}
+.OfferItemOne::before,
+.OfferItemTwo::before,
+.OfferItemThree::before
+{
+  position: absolute;
+  content: " ";
+  width: 100%;
+  height: 0;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background-color: rgba(81, 79, 79, 0.256);
+  border-radius: 12px;
+  transition: 0.5s;
+}
+.OfferItemOne:hover::before,
+.OfferItemTwo:hover::before,
+.OfferItemThree:hover::before{
+  height: 100%;
+}
+
+
+
+
+/* ==================================== Section 9 Reviews ============================ */
+
+.revContainer{
+  width: 100%;
+  
+}
+.revBackGround{
+  width: inherit;
+  height: 300px;
+  background-image: url(../Images/Chair2.jfif);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+  margin-top: 20px;
+}
+.revOverLayContOne,
+.revOverLayContTwo
+{
+  float: left;
+  width: 42%;
+  height: 200px;
+  margin-right: 80px;
+  color: white;
+  overflow: auto;
+  margin-top: 30px;
+}
+.revImg{
+  float: left;
+  padding: 10px 0;
+}
+.revParagraph{
+  width: 70%;
+  float: left;
+  margin: 30px 10px;
+  
+}
+.revParagraph h4{
+  color: #da4e08;
+  margin-bottom: 20px;
+}
+.revParagraph h3,
+.revParagraph h4{
+  text-align: left;
+  margin-left: 5px;
+}
+
+
+/* ==================================== Section 10 Our team ============================ */
+
+.teamContainer{
+  width: 100%;
+  padding: 30px 0;
+  text-align: center;
+  margin: auto;
+  height: 80vh;
+  background-color: rgba(173, 155, 65, 0.118);
+  position: relative;
+}
+.teamDivs{
+  position: absolute;
+  width:90%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50% , -50%);
+  overflow: auto;
+  margin-left: 40px;
+
+}
+.TeamItemOne,
+.TeamItemTwo,
+.TeamItemThree{
+  float: left;
+  width: 30%;
+  margin-right: 20px;
+  text-align: center;
+  padding-bottom: 20px;
+  position: relative;
+}
+.TeamItemOne::after,
+.TeamItemTwo::after,
+.TeamItemThree::after{
+  position: absolute;
+  content: " ";
+  width: 100%;
+  height: 0;
+  top:0;
+  left: 0;
+  z-index: -1;
+  background-color: rgba(81, 79, 79, 0.256);
+  transition: 1s;
+
+}
+.TeamItemOne:hover::after,
+.TeamItemTwo:hover::after,
+.TeamItemThree:hover::after{
+  height: 100%;
+}
+.TeamImg{
+  width: 90%;
+  margin: auto;
+  position: relative;
+  margin-top: 15px;
+
+}
+.TeamImg img{
+  width: 100%;
+}
+.TeamOverLay{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color:  rgba(128, 128, 128, 0.598);
+  visibility: hidden;
+  
+}
+.TeamItemOne:hover .TeamOverLay,
+.TeamItemTwo:hover .TeamOverLay,
+.TeamItemThree:hover .TeamOverLay{
+  visibility: visible;
+}
+.TeamItemOne:hover h4,
+.TeamItemTwo:hover h4,
+.TeamItemThree:hover h4{
+  color: #da4e08;
+}
+.TeamOverLay a{
+  width: 40px;
+  height: 40px;
+  display: block;
+  background-color: #ed7336;
+  color: white;
+  font-size: 20px;
+  margin-left: auto ;
+}
+.TeamOverLay a i{
+  
+  line-height: 40px;
+}
+.TeamInfo{
+  margin-top: 10px;
+  line-height: 25px;
+}
+.TeamInfo p{
+  color: #da4e08;
+}
+.TeamItemOne:hover h4,
+.TeamItemTwo:hover h4,
+.TeamItemThree:hover h4{
+  color: #da4e08;
+}
+.TeamItemOne:hover p,
+.TeamItemTwo:hover p,
+.TeamItemThree:hover p{
+  color: black;
+}
+
+/* ==================================== Section 11 Our Blog ============================ */
+.BlogContainer{
+  width: 100%;
+  margin-top: 30px;
+  position: relative;
+  height: 700px;
+}
+.BlogItems{
+  position: absolute;
+  width: 95%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50% , -50%);
+  overflow: auto;
+  margin-top: 10px;
+}
+.BlogItems h3{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: larger;
+
+}
+.BlogItems p{
+  font-size: 15px;
+}
+
+.BlogContent{
+  padding: 10px
+}
+.BlogContent a{
+  text-decoration: none;
+  color: #da4e08;
+}
+.BLogItem1,
+.BlogItem2,
+.BlogItem3
+{
+  float: left;
+  width: 32%;
+  position: relative;
+}
+.BLogItem1,
+.BlogItem2{
+  margin-right: 15px;
+}
+.BlogImg{
+  width: 100%;
+  margin-bottom: 10px;
+}
+.BlogImg img{
+  width: inherit;
+  height: 340px;
+
+}
+.BlogIconsText{
+  margin-right: 3px;
+  font-size: 12px;
+  color: rgb(132, 129, 129);
+
+}
+.BlogIcon{
+  color: #da4e08;
+  font-size: 12px;
+}
+
+.BLogItem1::before,
+.BlogItem2::before,
+.BlogItem3::before
+{
+  position: absolute;
+  content: " ";
+  width: 100%;
+  height: 0;
+  top:0;
+  left: 0;
+  background-color: rgba(81, 79, 79, 0.256);
+  transition: 0.7s;
+}
+.BLogItem1:hover::before,
+.BlogItem2:hover::before,
+.BlogItem3:hover::before
+{
+  height: 100%;
+}
+
+
+/* ==================================== Section 12 Footer ============================ */
+
+.FooterContainer{
+  width: 100%;
+  position: relative;
+  height: 350px;
+  background-color: black;
+}
+.FooterContent{
+  position: absolute;
+  width: 40%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50% , -50%);
+  text-align: center;
+}
+.FooterLinks{
+  list-style: none;
+  margin: 20px 0;
+}
+.FooterLinks li{
+    display: inline-block;
+    background-color: #ed7336;
+    width: 50px;
+    height: 50px;
+    position: relative;
+    z-index: 1;
+    border-radius: 50%;
+}
+.FooterLinks li a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    line-height: 50px;
+    padding-top: 15px;
+    padding-right: 15px;
+    font-size: 23px;
+    margin: 0 8px;
+}
+.FooterLinks li::before{
+  position: absolute;
+  content: " ";
+  width: 100%;
+  height: 0;
+  top: 0;
+  left: 0;
+  background-color: rgba(211, 211, 211, 0.364);
+  border-radius: 50%;
+
+}
+.FooterLinks li:hover::before{
+  height: 100%;
+}
+.FooterContent p{
+  color: white;
+  font-size: 11px;
+}
